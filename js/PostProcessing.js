@@ -28,7 +28,7 @@ export default class PostProcessing extends ThreeasyComponent {
         varying vec2 vUv;
         uniform sampler2D tDiffuse;
         void main() {
-          float smoothstepStart = .1;
+          float smoothstepStart = .9;
           float smoothstepEnd = .9;
           vec4 color = texture2D( tDiffuse, vUv );
 
