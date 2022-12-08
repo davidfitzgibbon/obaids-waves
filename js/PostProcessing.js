@@ -32,12 +32,10 @@ export default class PostProcessing extends ThreeasyComponent {
           float smoothstepEnd = .9;
           vec4 color = texture2D( tDiffuse, vUv );
 
-          float r = smoothstep(smoothstepStart, smoothstepEnd, color.r);
-          float g = smoothstep(smoothstepStart, smoothstepEnd, color.g);
-          float b = smoothstep(smoothstepStart, smoothstepEnd, color.b);
-          float a = color.a;
           
-          gl_FragColor = vec4(r,g,b,a);
+          float a = smoothstep(smoothstepStart, smoothstepEnd, color.a);;
+          
+          gl_FragColor = vec4(color.rgb,a);
         }
       `,
     };
