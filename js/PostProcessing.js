@@ -37,7 +37,7 @@ export default class PostProcessing extends ThreeasyComponent {
           float b = smoothstep(smoothstepStart, smoothstepEnd, color.b);
           float a = color.a;
           
-          gl_FragColor = vec4( r,g,b,a);
+          gl_FragColor = vec4(r,g,b,a);
         }
       `,
     };
